@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="jquery.js"></script>
+     <title>Document</title>
+</head>
+<body>
+     <script>
+          $(document).ready(function(){
+               var element = $(".btns");
+               element.click(function(){
+                    $("#para").css("color", "green");
+                    $(this).css("padding", "14px 30px");
+               });
+          });
+     </script>
+     
+     <p id="para">our paragraph</p>
+     <button id="btn" class="btns">click me! 1</button>
+     <button id="btn" class="btns">click me! 2</button>
+     <button id="btn" class="btns">click me! 3</button>
+</body>
+</html>

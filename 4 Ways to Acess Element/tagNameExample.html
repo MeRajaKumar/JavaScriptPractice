@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeClr(){
+            var Paragraph=document.getElementsByTagName("p"); /* it is an Array */
+            for(var i=0;i<10;i++){
+                if(i==5){
+                    Paragraph[i].style.color="red";
+                }
+                else if(i==8){
+                    Paragraph[i].style.color="green";
+                }
+                else{
+                    Paragraph[i].style.color="blue";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Paragraph tag</p>
+    <p>Paragraph tag</p>
+    <p>Paragraph tag</p>
+    <p>Paragraph tag</p>
+    <p>Paragraph tag</p>
+    <p>Paragraph tag</p>
+    <p>Paragraph tag</p>
+    <p>Paragraph tag</p>
+    <p>Paragraph tag</p>
+    <p>Paragraph tag</p>
+    <button type="button" onclick="changeClr()">Click me!</button>
+</body>
+</html>

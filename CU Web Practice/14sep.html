@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Example</title>
+    <style>
+        @keyframes slide {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .box {
+  width: 100px;
+  height: 100px;
+  background-color: plum;
+  animation: slide 2s 1s; /* 1 second delay before starting */
+}
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

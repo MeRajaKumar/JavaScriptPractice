@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Simple Calculator using JavaScript</title>
+    <script>
+        function calculator() {
+            var operation = prompt("Enter the operation (+, -, *, /):", "+");
+            var num1 = parseFloat(prompt("Enter the first number:", "0"));
+            var num2 = parseFloat(prompt("Enter the second number:", "0"));
+
+            var result;
+            switch(operation) {
+                case "+":
+                    result = num1 + num2;
+                    alert(num1 + " + " + num2 + " = " + result);
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    alert(num1 + " - " + num2 + " = " + result);
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    alert(num1 + " * " + num2 + " = " + result);
+                    break;
+                case "/":
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                        alert(num1 + " / " + num2 + " = " + result);
+                    } else {
+                        alert("Division by zero is not allowed.");
+                    }
+                    break;
+                default:
+                    alert("Invalid operation. Please enter +, -, *, or /.");
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <button onclick="calculator()">Open Calculator</button>
+</body>
+</html>
+

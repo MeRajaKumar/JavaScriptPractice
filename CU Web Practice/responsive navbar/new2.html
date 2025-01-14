@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Validation</title>
+</head>
+<body>
+  <form id="emailForm">
+    <label for="email">Enter your Email:</label>
+    <input type="text" id="email" name="email" required>
+    <button type="submit">Validate</button>
+  </form>
+  <p id="result"></p>
+
+  <script>
+    document.getElementById('emailForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      const result = document.getElementById('result');
+      
+      if (isValid) {
+        result.textContent = "✅ Valid Email Address";
+        result.style.color = "green";
+      } else {
+        result.textContent = "❌ Invalid Email Address";
+        result.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>

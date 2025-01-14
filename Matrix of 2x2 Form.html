@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title></title>
+	<script>
+		var a[50];
+		var i;
+		var n;
+		var largest;
+		var smallest;
+			alert("Please deside the number of elements for checking largest or smallest number");
+			n.push(parseInt(prompt("Enter the number of elements for checking largest or smallest number :-")));
+			for(i=0;i<n;++i){
+				a[i]=parseInt(prompt("Enter the number of elements :-")));
+				}
+				largest=smallest=a[0];
+				for(i=1;i<n;++i){
+					if(a[i]>largest)
+					largest=a[i];
+
+					if(a[i]<smallest)
+					smallest=a[i];
+					}
+				document.write("The smallest element is :-"+smallest);
+				document.write("The largest element is :-"+largest);
+	</script>
+</head>
+<body>
+</body>
+</html>

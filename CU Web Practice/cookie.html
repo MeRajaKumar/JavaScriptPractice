@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Operations</title>
+</head>
+<body>
+
+<h1>Cookie Operations</h1>
+
+<!-- Input to set a cookie -->
+<label for="cookieName">Cookie Name:</label>
+<input type="text" id="cookieName" placeholder="Enter cookie name">
+<br>
+<label for="cookieValue">Cookie Value:</label>
+<input type="text" id="cookieValue" placeholder="Enter cookie value">
+<br>
+<button onclick="setCookie()">Set Cookie</button>
+
+<!-- Button to read cookie -->
+<button onclick="readCookie()">Read Cookie</button>
+
+<!-- Button to delete cookie -->
+<button onclick="deleteCookie()">Delete Cookie</button>
+
+<!-- Display cookie value -->
+<p id="cookieDisplay"></p>
+
+<script>
+    function setCookie() {
+        const name = document.getElementById("cookieName").value;
+        const value = document.getElementById("cookieValue").value;
+        const expires = new Date(Date.now() + 86400000).toUTCString(); // Expires in 1 day
+        document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+        alert("Cookie set!");
+    }
+
+    function readCookie() {
+        const name = document.getElementById("cookieName").value;
+        const cookieArr = document.cookie.split("; ");
+        let cookieValue = "";
+
+        for (let i = 0; i < cookieArr.length; i++) {
+            const cookiePair = cookieArr[i].split("=");
+            if (cookiePair[0] === name) {
+                cookieValue = cookiePair[1];
+                break;
+            }
+        }
+
+        document.getElementById("cookieDisplay").innerText = cookieValue ? 
+            `Value of ${name}: ${cookieValue}` : 
+            `Cookie "${name}" not found.`;
+    }
+
+    function deleteCookie() {
+        const name = document.getElementById("cookieName").value;
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+        alert(`Cookie "${name}" deleted!`);
+    }
+</script>
+
+</body>
+</html>

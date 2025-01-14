@@ -1,0 +1,40 @@
+<script>
+    // work of functions here
+    function addition(){
+        document.write("Your first number is "+num1+"<br>Your second number is "+ num2);
+        document.write("<br>additon of two numbers is : "+(num1+num2));
+    }
+    function subscractions(){
+        document.write("Your first number is "+num1+"<br>Your second number is "+ num2);
+        document.write("<br>subscraction of two numbers is : "+(num1-num2));
+    }
+    function multiplication(){
+        document.write("Your first number is "+num1+"<br>Your second number is "+ num2);
+        document.write("<br>multiplication of two numbers is : "+(num1*num2));
+    }
+    function division(){
+        return num1/num2;
+    }
+
+    var num1=parseInt(prompt("please enter first number"));
+    var num2=parseInt(prompt("please enter second number"));
+    var result;
+    var operation = parseInt(prompt("Please choice a number of operation following : 1. additon 2. substractions 3.multiline   4. division"));
+    switch(operation){
+        case 1:
+            addition();
+            break;
+        case 2:
+            subscractions();
+            break;
+        case 3:
+            multiplication();
+            break;
+        case 4:
+            result= division();
+            break;
+        default:
+            document.write("Please enter valid operation");
+    }
+    document.write("Your result is " + result);
+</script>

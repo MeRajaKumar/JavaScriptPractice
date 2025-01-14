@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 400px;
+            width: 500px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        function changeMe(){
+            var paragraph = document.getElementsByClassName("text");
+            for(i=0;i<10;i++){
+                if(paragraph[i].id=="div1"){
+                    paragraph[i].style.backgroundColor="aqua";
+                    paragraph[i].style.color="blue";
+                }
+                else{
+                    paragraph[i].style.color="green";
+                }
+            }
+        }
+
+    </script>
+    <div id="div1" class="text">
+        <h1 class="text">Aayush Gupta</h1>
+        <p class="text">Welcome to this site!</p>
+    </div>
+    <button type="button" onclick="changeMe()">click me!</button>
+</body>
+</html>

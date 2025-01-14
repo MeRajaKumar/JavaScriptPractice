@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Basic styles for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+        }
+    </style>
+    <title>Custom Dialog Box</title>
+</head>
+<body>
+
+    <button onclick="showModal()">Open Custom Dialog</button>
+
+    <div id="customDialog" class="modal">
+        <div class="modal-content">
+            <p>This is a custom dialog box!</p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to display the modal
+        function showModal() {
+            document.getElementById("customDialog").style.display = "block";
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById("customDialog").style.display = "none";
+        }
+    </script>
+</body>
+</html>

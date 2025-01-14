@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createNumber(){
+            var counter=1;
+            var num =0;
+            for (var i=1;i<=numDigit;i++){
+                num=num+(beforeNumber.pop()*counter);
+                counter=counter*10;
+            }
+            return num;
+        }
+        function checkDivisibility(num){
+            if(num%11==0){document.write("yes "+num+" is divisible by 11");}
+            else{document.write("yes "+num+" is not divisible by");}
+        }
+        var numDigit = parseInt(prompt("How many digits do you want to enter?"));
+        var beforeNumber = [];
+        for(var i=1;i<=numDigit;i++){
+            var digit = parseInt(prompt("enter a digit"));
+            if(digit==Nan){
+                alert("please enter a valid digit.");
+                i--;
+
+            }
+            else{
+                beforeNumber.push(digit);
+            }
+        }
+        var finalNumber =createNumber();
+        checkDivisibility(finalNumber);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+     <title>Nav Bar</title>
+     <style>
+          body{
+               margin: 0;
+               padding: 0;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+          nav{
+               width: 280px;
+               height: 100vh;
+               background-color: dodgerblue;
+               text-align: center;
+               display: none;
+               
+          }
+          nav a{
+               font-size: 1.4rem;
+               display: block;
+               color: white;
+               padding: 20px 0;
+               text-decoration: none;
+               cursor: pointer;
+               font-family:Arial, Helvetica, sans-serif;
+
+               &:hover{
+                    background-color: rgb(0,0,0,.8);
+                    font-size: 1.5rem;
+                    transition: 0.5s all ease;
+               }
+               
+          }
+          nav button{
+               
+               font-size: 1.5rem;
+               background-color: rgb(74, 121, 169);
+               color: #fff;
+               padding: 10px 0;
+               width: 280px;
+               border: 1px solid #fff;
+               cursor: pointer;
+               &:hover{
+                    font-size: 1.6rem;
+                    transition: 0.5s all ease;
+               }
+          }
+          nav button i{
+               font-size: 1.8rem;
+          }
+          #btnOpen,#btnOpen i{
+               /* display: none; */
+               font-size: 1.5rem;
+               background-color: rgb(74, 121, 169);
+               color: #fff;
+               padding: 10px 0;
+               width: 280px;
+               border: none !important;
+               cursor: pointer;
+               &:hover{
+                    font-size: 1.6rem;
+                    transition: 0.5s all ease;
+               }
+          }
+     </style>
+</head>
+<body>
+     <button id="btnOpen"><i class="ri-menu-line"></i> Open</button>
+     <nav id="sideNav">
+          <button id="btnClose"><i class="ri-close-fill"></i></i>Close</button>
+          <a href="">Link 1</a>
+          <a href="">Link 2</a>
+          <a href="">Link 3</a>
+          <a href="">Link 4</a>
+          <a href="">Link 5</a>
+          <a href="">Link 6</a>
+          <a href="">Link 7</a>
+     </nav>
+     <script>
+          var sideNav = document.querySelector('#sideNav');
+          var btnOpen = document.getElementById("btnOpen");
+          var btnClose = document.getElementById("btnClose");
+          btnOpen.addEventListener("click",function(){
+               sideNav.style.display = "block";
+               btnOpen.style.display = "none";
+               // console.log("hey");
+     
+          })
+          btnClose.addEventListener("click",function(){
+               sideNav.style.display = "none";
+               btnOpen.style.display = "block";
+               // console.log("hey");
+     
+          })
+     </script>
+</body>
+</html>

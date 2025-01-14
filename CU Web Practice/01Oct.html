@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+     <button onclick="removeElement()">Remove Element</button>
+
+<script>
+    function removeElement() {
+        var container = document.getElementById("container");
+        // Remove the last child element
+        if (container.lastChild) {
+            container.removeChild(container.lastChild);
+        }
+    }
+</script>
+
+    <div id="container">
+        <h1>Welcome to DOM Manipulation</h1>
+    </div>
+
+    <button onclick="addElement()">Add Element</button>
+
+    <script>
+        function addElement() {
+            // Create a new element
+            var newDiv = document.createElement("div");
+            // Add content to the new element
+            var newContent = document.createTextNode("Hello, I am a new div!");
+            newDiv.appendChild(newContent);
+            // Append the new element to the DOM
+            var currentDiv = document.getElementById("container");
+            currentDiv.appendChild(newDiv);
+        }
+    </script>
+
+<button onclick="modifyElement()">Modify Element</button>
+
+<script>
+    function modifyElement() {
+        var heading = document.querySelector("h1");
+        // Modify the content of the heading
+        heading.textContent = "DOM Manipulation Changed!";
+        // Change the style
+        heading.style.color = "red";
+    }
+</script>
+
+<button id="alertButton">Click Me</button>
+
+<script>
+    document.getElementById("alertButton").addEventListener("click", function() {
+        alert("Button Clicked!");
+    });
+</script>
+
+</body>
+</html>

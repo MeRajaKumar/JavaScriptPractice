@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide And Show</title>
+    <script>
+        function hideAndShow() {
+            var img = document.getElementById("img");
+            var btn = document.getElementById("btn");
+            if(btn.innerHTML=="Hide Me"){
+                img.style.display="none";
+                btn.innerHTML="Show Me";
+            }
+            else{
+                img.style.display="Block";
+                btn.innerHTML="Hide Me";
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <img src="D:\Aayush Gupta\Just me\AG 3.jpg" id="img" alt="" height="400px" width="600px">
+    <button type="button" onclick="hideAndShow()" id="btn">Hide Me</button>
+</body>
+</html>

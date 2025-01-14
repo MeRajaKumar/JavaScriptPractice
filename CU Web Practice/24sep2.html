@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+
+     </style>
+</head>
+<body>
+     <label for="">Your 1st Number!</label> <input type="text" id="num1"><br>
+     <label for="">Your 2nd Number!</label> <input type="text" id="num2"><br>
+     <select name="" id="operation">
+          <option value="" id="add1" selected>Select</option>
+          <option value="" id="add1">Addition</option>
+          <option value="" id="sub2">Substraction</option>
+          <option value="" id="mul3">Multiplication</option>
+          <option value="" id="div4">Division</option>
+     </select><br>
+     <button id="btnTotal" type="button" onclick="AnounctRst()">Result</button>
+     <p id="result"></p>
+     <script>
+          var num1 = document.getElementById("num1");
+          var num2 = document.getElementById("num2")
+          var operation = Document.getElementById("operation")
+          var tot=0;
+          function opera(){
+               document.getElementById("result").innerHTML="Result = "+tot;
+          }
+          switch(operation){
+               case "Addition":
+                    tot= num1 + num2;
+                    opera();
+                    break;
+               case "Substraction":
+                    tot=num1-num2;
+                    opera();
+                    break;
+               case "Multiplication":
+                    tot= num1 * num2;
+                    opera();
+                    break;
+               case "Division":
+                    tot=num1/num2;
+                    opera();
+                    break;
+          }
+          
+
+
+          // if(operation==1){
+          //      tot= num1 + num2;
+          //      opera();
+          // }else if(operation == 2){
+          //      tot= num1 - num2;
+          //      document.getElementById("totalValue").innerHTML=tot;
+          // }else if(operation==3){
+          //      tot= num1 * num2;
+          //      document.getElementById("totalValue").innerHTML=tot;
+          // }else{
+          //      ot= num1 / num2;
+          //      document.getElementById("totalValue").innerHTML=tot;
+          // }
+          
+     </script>
+
+</body>
+</html>

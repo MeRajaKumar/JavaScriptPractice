@@ -1,0 +1,40 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+body{
+     background-color: red;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     width: 100%;
+}
+.container{
+     height: 400px;
+     width: 600px;
+     background-color: blue;
+     text-align: center;
+}
+.container > h1{
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 40px;
+}
+.container > input{
+     height: 25px;
+     width: 400px;
+     padding: 20px;
+
+}
+.container > button{
+     color: #fff;
+     background-color: red;
+     font-size: 25px;
+     padding: 20px 25px;
+     &:hover{
+          color: #000;
+          background-color: yellow;
+          transform: scale(1.1);
+     }
+}

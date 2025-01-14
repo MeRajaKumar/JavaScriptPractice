@@ -1,0 +1,57 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+body{
+     height: 100vh;
+     width: 100%;
+     background: linear-gradient(to bottom, #F9F9F9 0%, #F9F9F9 62%, #EF0000 62%, #EF0000 100%);
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     padding: 130px 96px 0px 96px;
+     /* padding:0px 20px; */
+}
+.container{
+     height: 350px;
+     width: 300px;
+     border-radius: 15px;
+     background-color: #fff;
+     padding: 35px;
+     box-shadow: 1px 1px 2px black;
+     /* gap: 20px; */
+}
+.container i{
+     font-size: 60px;
+}
+.container h3{
+     margin-top: 15px;
+     font-size: 1.2rem;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container p{
+     margin-top: 15px;
+     font-size: .9rem;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 500;
+}
+.container div .gitBtn{
+     padding: 8px 25px;
+     margin-top: 20px;
+     border-radius: 40px;
+     border: none;
+     background-color: #EF0000;
+     cursor: pointer;
+}
+.container div .gitBtn a{
+     text-decoration: none;
+     color: #fff;
+     font-size: 1rem;
+     font-weight: 600;
+}
+img{
+     position: absolute;
+     right: 30%;
+     top: 20px;
+     
