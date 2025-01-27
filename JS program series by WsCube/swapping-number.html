@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // swapping number
+        // a : swapping using temporary variable;
+        
+        var a = prompt('please enter the first value');
+        var b = prompt('please enter the second value');
+        console.log(`The value of a is: ${a}, The value of b is: ${b}`);
+        var temp;
+        temp = a;
+        a = b;
+        b = temp;
+        console.log(`After the swapping value of a is: ${a}, The value of b is: ${b}`);
+        
+        // b : without using temp value
+        var num1 = 5;
+        var num2 = 6;
+
+        console.log(`The value of a is: ${num1}, The value of b is: ${num2}`);
+        num1 = num1 + num2;
+        num2 = num1 - num2;
+        num1 = num1 - num2;
+        console.log(`After the swapping value of a is: ${num1}, The value of b is: ${num2}`);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

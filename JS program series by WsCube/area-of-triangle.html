@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1
+        // formula: (base * height)/2
+
+        var base = prompt('please enter a base value','');
+        var height = prompt('please enter the height value');
+        var area = (base*height)/2;
+        console.log('Base: '+base+' Height: '+height+' Area: '+area);
+
+        // 2 
+        // to find the area of regular triangle( heron's formula)
+        // formula: s = ( a + b + c)/2;
+
+        var a = 10;
+        var b = 5;
+        var c = 10;
+        var s = (a+b+c)/2;
+        var temp = s*(s-a)*(s-b)*(s-c);
+        var area = Math.sqrt(temp);
+        console.log(area);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
