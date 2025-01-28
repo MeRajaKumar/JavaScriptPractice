@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover and Mouseout Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        p {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .hover {
+            background-color: #f0f8ff;
+        }
+    </style>
+</head>
+<body>
+    <p id="hoverParagraph">Hover over this paragraph to see the effect!</p>
+    <script>
+        $(document).ready(function () {
+            // Mouseover event
+            $("#hoverParagraph").mouseover(function () {
+                $(this).addClass("hover");
+            });
+
+            // Mouseout event
+            jQuery("#hoverParagraph").mouseout(function () {
+                $(this).removeClass("hover");
+            });
+
+            // dbclick
+            $("#hoverParagraph").dblclick(function(){
+                alert("The paragraph was double clicked.");
+            });
+
+            // single click
+            $("#hoverParagraph").click(function(){
+                alert("The paragraph was single clicked.");
+            });
+
+            // Mouse enter
+            // $("#hoverParagraph").mouseenter(function(){
+            //     $("#hoverParagraph").css("background-color", "yellow");
+            // });
+        
+        });
+    </script>
+
+    <input type="text" name="text" id="text" size="30" value="Select this text"/>
+    <script>
+        $(document).ready(function () {
+            //select
+            $("#text").select(function(){
+                alert("text selected");
+            });
+
+            //keypress
+            $("#text").keypress(function(x){
+                var keycode = (x.keyCode ? x.keyCode : x.which);
+                if(keycode == '13'){
+                    alert('you passed "enter" key in textbox');
+                }
+            });
+        
+        });
+    </script>
+
+    <p>try the scroll bar in the div</p>
+    <div style="border:1px solid black; width: 200px; height: 100px; overflow: scroll;">
+        // lots of content to scroll
+        ------
+    </div>
+
+    <p>scrolled <span>0</span> times.</p>
+    <button>trigger scroll event for the window</button><br>
+
+
+    <script>
+        var x = 0;
+        $(document).ready(function(){
+            $("div").scroll(function(){
+                $("span").text(x+=1);
+            });
+
+            $("button").click(function(){
+                $("div").scroll();
+            });
+        });
+    </script>
+
+
+
+    <img src="missing.jpg" alt="img not shwo" srcset="">
+    <script>
+        // $(document).ready(function(){
+            $("img").on("error", function(){
+                alert("missing img");
+                $(this).attr("src", "replace.jpg");
+
+            }).attr("src","missing.png");
+
+        // });
+    </script>
+
+</body>
+</html>
