@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed & Fluid Containers - Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .fixed-top-container {
+            height: 80px; /* Fixed Height */
+            background-color: #ff5733; /* Reddish */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fluid-container-1 {
+            flex: 1; /* Takes remaining space */
+            background-color: #33ff57; /* Greenish */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+        }
+
+        .fluid-container-2 {
+            flex: 1; /* Takes remaining space */
+            background-color: #3385ff; /* Bluish */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .fixed-bottom-container {
+            height: 80px; /* Fixed Height */
+            background-color: #ff33c4; /* Pinkish */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full viewport height */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- Fixed Top Container -->
+        <div class="fixed-top-container">Fixed Top Container</div>
+
+        <!-- Fluid Containers -->
+        <div class="fluid-container-1">Fluid Container 1</div>
+        <div class="fluid-container-2">Fluid Container 2</div>
+
+        <!-- Fixed Bottom Container -->
+        <div class="fixed-bottom-container">Fixed Bottom Container</div>
+    </div>
+
+    <!-- Bootstrap JS (Optional, for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
