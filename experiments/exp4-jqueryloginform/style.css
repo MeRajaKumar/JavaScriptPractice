@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;  /* Reduced width for compact form */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center content */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-field {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Reduced font size */
+    box-sizing: border-box;
+}
+
+.input-field input:focus {
+    border-color: #ff6b6b;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f06595;
+}
+
+.gender {
+    text-align: left;
+    display: inline-block;
+}
+
+.gender input {
+    margin-right: 10px;
+}

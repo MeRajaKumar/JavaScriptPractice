@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Create an Account</h2>
+        <form id="signupForm">
+            <div class="input-field">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                <span class="error" id="fullNameError"></span>
+            </div>
+
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <div class="input-field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <span class="error" id="passwordError"></span>
+            </div>
+
+            <div class="input-field">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                <span class="error" id="confirmPasswordError"></span>
+            </div>
+
+            <div class="input-field gender">
+                <label>Gender</label>
+                <input type="radio" name="gender" value="Male" id="male"> Male
+                <input type="radio" name="gender" value="Female" id="female"> Female
+                <span class="error" id="genderError"></span>
+            </div>
+
+            <div class="input-field">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+                <span class="error" id="dobError"></span>
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
