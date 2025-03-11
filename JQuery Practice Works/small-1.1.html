@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Text with Button (jQuery)</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            width: 600px;
+        }
+    </style>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Create a simple HTML page with a button. When the button is clicked, display "Hello, World!" using jQuery.</h1>
+        <p id="showtxt"></p>
+        <button id="clickBtn">Click Me!!</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // method 1
+            const $showtxt = $('#showtxt'); 
+            const $clickBtn = $('#clickBtn'); 
+
+            // Add a click event listener to the button
+            $clickBtn.click(function () {
+                if ($showtxt.text() === "") {
+                    $showtxt.text("Hello, World!");
+                    $clickBtn.text("Reset Text");
+                } else {
+                    $showtxt.text("");
+                    $clickBtn.text("Click Me!!");
+                }
+            });
+
+
+            // method 2
+            // Add a click event listener to the button
+            $('#clickBtn').click(function () {
+                if ($('#showtxt').text() === "") {
+                    $('#showtxt').text("Hello, World!");
+                    $('#clickBtn').text("Reset Text");
+                } else {
+                    $('#showtxt').text("");
+                    $('#clickBtn').text("Click Me!!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
