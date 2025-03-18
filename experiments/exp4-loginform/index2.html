@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login & Signup | Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.875rem;
+        }
+
+        .btn {
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card shadow-lg p-4">
+                    <div class="text-center">
+                        <h2 id="form-title">Sign In</h2>
+                        <div class="my-3">
+                            <a href="#" class="btn btn-outline-danger mx-1"><i class="fab fa-google"></i></a>
+                            <a href="#" class="btn btn-outline-primary mx-1"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="btn btn-outline-dark mx-1"><i class="fab fa-github"></i></a>
+                            <a href="#" class="btn btn-outline-info mx-1"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <p>or use your email for login</p>
+                    </div>
+
+                    <!-- Login Form -->
+                    <form id="login-form">
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="login-email" placeholder="Enter your email">
+                            <div class="error" id="login-email-error"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" id="login-password" placeholder="Enter your password">
+                            <div class="error" id="login-password-error"></div>
+                        </div>
+                        <a href="#" class="d-block text-end mb-3">Forgot Your Password?</a>
+                        <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                        <div class="text-center mt-3">
+                            <p>Don't have an account? <a href="#" id="toggle-signup">Sign Up</a></p>
+                        </div>
+                    </form>
+
+                    <!-- Signup Form -->
+                    <form id="signup-form" style="display: none;">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="signup-name" placeholder="Enter your name">
+                            <div class="error" id="signup-name-error"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signup-email" placeholder="Enter your email">
+                            <div class="error" id="signup-email-error"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mobile Number</label>
+                            <input type="text" class="form-control" id="signup-phone" placeholder="Enter your mobile number">
+                            <div class="error" id="signup-phone-error"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signup-password" placeholder="Enter your password">
+                            <div class="error" id="signup-password-error"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Age Range</label>
+                            <input type="range" class="form-range" min="18" max="60" id="signup-age">
+                        </div>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="terms">
+                            <label class="form-check-label" for="terms">Agree to Terms & Conditions</label>
+                            <div class="error" id="terms-error"></div>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Sign Up</button>
+                        <div class="text-center mt-3">
+                            <p>Already have an account? <a href="#" id="toggle-login">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // Toggle Sign Up / Sign In forms
+            $('#toggle-signup').click(function () {
+                $('#login-form').hide();
+                $('#signup-form').show();
+                $('#form-title').text('Create Account');
+            });
+
+            $('#toggle-login').click(function () {
+                $('#signup-form').hide();
+                $('#login-form').show();
+                $('#form-title').text('Sign In');
+            });
+
+            // Validate and submit the login form
+            $('#login-form').submit(function (e) {
+                e.preventDefault();
+                let email = $('#login-email').val();
+                let password = $('#login-password').val();
+                let isValid = true;
+
+                // Clear previous error messages
+                $('.error').text('');
+
+                // Email validation
+                if (email === '') {
+                    $('#login-email-error').text('Email is required');
+                    isValid = false;
+                }
+
+                // Password validation
+                if (password === '') {
+                    $('#login-password-error').text('Password is required');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    alert('Login Successful');
+                }
+            });
+
+            // Validate and submit the signup form
+            $('#signup-form').submit(function (e) {
+                e.preventDefault();
+                let name = $('#signup-name').val();
+                let email = $('#signup-email').val();
+                let phone = $('#signup-phone').val();
+                let password = $('#signup-password').val();
+                let terms = $('#terms').prop('checked');
+                let isValid = true;
+
+                // Clear previous error messages
+                $('.error').text('');
+
+                // Name validation
+                if (name === '') {
+                    $('#signup-name-error').text('Name is required');
+                    isValid = false;
+                }
+
+                // Email validation
+                if (email === '') {
+                    $('#signup-email-error').text('Email is required');
+                    isValid = false;
+                }
+
+                // Mobile Number validation
+                if (phone === '' || !/^\d{10}$/.test(phone)) {
+                    $('#signup-phone-error').text('Enter a valid 10-digit phone number');
+                    isValid = false;
+                }
+
+                // Password validation
+                if (password === '') {
+                    $('#signup-password-error').text('Password is required');
+                    isValid = false;
+                }
+
+                // Terms and Conditions validation
+                if (!terms) {
+                    $('#terms-error').text('You must agree to the terms and conditions');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    alert('Signup Successful');
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
