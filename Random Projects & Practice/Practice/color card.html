@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0%;
+                padding: 0%;
+                background-color: aquamarine;
+            }
+            #mainBox{
+                height: 250px;
+                width: 350px;
+                background-color: rgb(218, 215, 24);
+                margin: 250px 0px 0px 500px;
+                position: absolute;
+            }
+            .box{
+                height: 150px;
+                width: 200px;
+                background-color: rgb(0, 0, 0); 
+                margin: 40px 10px 0px 70px;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mainBox">  <div class="box"></div> </div>
+            <script>
+                const mEnter = document.getElementById('mainBox');
+                mEnter,addEventListener('mouseenter',() => {
+                    mEnter.style.backgroundColor = 'red';
+                    console.log('mouse enter bro');
+                });
+
+                mEnter,addEventListener('mouseleave',() => {
+                    mEnter.style.backgroundColor = 'pink';
+                    console.log('mouse leave bro');
+
+                });
+            </script>
+    </body>
+</html>

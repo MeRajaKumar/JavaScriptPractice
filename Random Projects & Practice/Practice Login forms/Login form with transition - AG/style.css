@@ -1,0 +1,126 @@
+body {
+	margin: 0px;
+	background-color: #7E2BF3;
+
+}
+.WYW {
+	position: absolute;
+	margin: 15% 39%;
+	height: 50%;
+	width: 22%;
+	opacity:75%;
+	background-color: black;
+	box-shadow:0 0 5px black;
+	border-radius: 10%;
+	overflow: none;
+}
+.WYW h1{
+	margin: 15%;
+	color: white;
+	font-family: Arial Black;
+	font-size:26px;
+	text-shadow: 0 0 25px darkolivegreen;
+	text-align: center;
+
+}
+.WYW input[type="submit"]{
+	margin:10% ;
+	width: 80%;
+	height: 30px;
+	display: block;
+	border:none;
+	outline:none;
+	height:40px;
+	background:#33B3FF;
+	color:#fff;
+	font-size:18px;
+	border-radius:20px;
+}
+.WYW input[type="submit"]:hover
+	{
+		cursor:pointer;
+		background:#ffc107;
+		color:#000;
+	}
+.Login {
+	position: absolute;
+	margin: 9% 9%;
+	height: 65%;
+	width: 22%;
+	opacity: 75%;
+	background-color: darkolivegreen;
+	box-shadow:0 0 10px darkolivegreen;
+	border-radius: 20px;
+}
+.Login h1{
+	margin:0;
+	padding:0 0 10px;
+	text-align:center;
+	font-size:22px;
+}
+.Login p{
+	margin:10%;
+	padding:0;
+	font-weight:bold;
+	}
+.Login input{
+	width:80%;
+	margin: 10%;
+	margin-bottom:20px;
+	}
+.Login input[type="text"], input[type="password"]
+	{
+		border:none;
+		border-bottom:1px solid #fff;
+		background:transparent;
+		outline:none;
+		height:40px;
+		color:#fff;
+		font-size:16px;
+	}
+.Login input[type="submit"]
+	{
+		border:none;
+		outline:none;
+		height:40px;
+		background:#33B3FF;
+		color:#fff;
+		font-size:18px;
+		border-radius:20px;
+	}
+.Login input[type="submit"]:hover
+	{
+		cursor:pointer;
+		background:#ffc107;
+		color:#000;
+	}
+.SingUp {
+	position: absolute;
+	display: block;
+	margin: 7% 69%;
+	height: 72%;
+	width: 22%;
+	background-color: #491F85;
+	box-shadow:0 0 10px #491F85;
+	border-radius: 20px;
+	overflow: none;
+}
+.SingUp h1{
+	margin:8%;
+	padding:0 0 0px;
+	text-align:center;
+	font-size:25px;
+	font-family: Arial Black;
+	color: white;
+}
+.SingUp input[type="text"]{
+	width:80%;
+	display: block;
+	margin:0 0 3% 9%;
+	padding: 5px;
+	background:transparent;
+	color:white;
+	outline:none;
+	border-radius: 20px;
+	border-color: #2FF00D;
+}

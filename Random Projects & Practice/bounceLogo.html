@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        
+        .container{
+            /* for center the div  */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 200px;
+            height: 200px;
+            background-color: rgb(158, 228, 228);
+            border: 2px solid black;
+            border-radius: 50%;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%,100%{
+                transform: translateY(0);
+
+            }
+            50%{
+                transform: translateY(-70px);
+            }
+        }
+        
+        h1{
+            text-align: center;
+            margin-top:20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>The Work of css bouncing things</h1>
+    <div class="container">
+        
+        
+    </div>
+    <div class="circle"></div>
+</body>
+</html>

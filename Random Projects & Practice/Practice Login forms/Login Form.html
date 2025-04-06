@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>Login form</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+			font-family:
+			
+			}
+		body{
+			background-image:url('http://getwallpapers.com/wallpaper/full/3/0/0/146812.jpg');
+			background-size:cover;
+			}
+		#loginForm{
+			width:350px;
+			top:50%;
+			left:50%;
+			transform:translate(-50%, -50%);
+			position:absolute;
+			color:#fff;
+			}
+		#loginForm h1{
+			font-size:40px;
+			text-align:center;
+			text-transform:uppercase;
+			margin:40px 0;
+			text-shadow:0 0 5px black;
+			}
+		#loginForm p{
+			font-size:20px;
+			margin:15px 0;
+			}
+		#loginForm input{
+			font-size:16px;
+			width:100%;
+			padding:15px 10px;
+			border:0;
+			outline:none;
+			border-radius:5px;
+			}
+		#loginForm button{
+			font-size:18px;
+			font-weight:bold;
+			margin:20px 25%;
+			width:50%;
+			outline:none;
+			padding:10px 15px;
+			border-radius:15px;
+			}
+		#loginForm input:hover
+			{
+			cursor:pointer;
+			background:pink;
+			color:black;
+			}
+		#loginForm button:hover
+			{
+			color:black;
+			background:red;
+			}
+	</style>
+<body>
+	<div id="loginForm">
+		<h1>Login Form</h1>
+		<form action="#" method="post">
+			<p>User Name or Email Address</p>
+			<input type="text" name="user" placeholder="user name">
+			<p>Password</p>
+			<input type="password" name="password" placeholder="password">
+			<button type="submit">Login</button>
+		</form>
+</body>
+</head>
+</html>

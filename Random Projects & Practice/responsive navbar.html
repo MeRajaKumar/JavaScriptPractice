@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Responsove Navbar</title>
+     <style>
+          *{
+               margin: 0;padding: 0;box-sizing: border-box;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          }
+          body{
+               height: 100vh;width: 100%;display: flex;justify-content: center;background-color: rgb(205, 205, 123);position: absolute;
+          }
+          .header-Container{
+               background-color: #ffffffb3;
+               height: 60px;
+               width: 70%;
+               border-radius: 32px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               padding: 0px 28px;
+               /* box-shadow: 0px 0px 5px rgb(29, 91, 225); */
+               position: relative;
+               top: 20px;
+               
+          }
+          .header-Container h1{
+               color: rgb(223, 139, 12);
+          }
+          .header-Container ul li{
+               display: inline;
+          }
+          .header-Container ul li a{
+               text-decoration: none;
+               padding: 0px 10px;
+               font-size: 1.3rem;
+               color: rgb(24, 20, 20);
+               &:hover{
+                    color: rgb(223, 139, 12);
+               }
+          }
+     </style>
+</head>
+<body>
+     <header class="header-Container">
+          <h1>LOGO</h1>
+          <nav>
+               <ul>
+                    <li><a href="http://">Home</a></li>
+                    <li><a href="http://">About</a></li>
+                    <li><a href="http://">Blog</a></li>
+                    <li><a href="http://">Product</a></li>
+                    <li><a href="http://">Contact</a></li>
+               </ul>
+          </nav>
+     </header>
+     <script>
+
+     </script>
+</body>
+</html>
