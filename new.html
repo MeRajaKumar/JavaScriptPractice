@@ -1,0 +1,32 @@
+<html>
+<head>
+    
+</head>
+<body>
+    <button onclick="generatePassword(8)">Generate Pass</button>
+    <p id="password"></p>
+
+    <script>
+        function generatePassword(length){
+            const char = 'ABCDEFGHIJKLMNOPQRSTUVWhhh7fy656ffds45eXYZabcdefghijkwxyz0123456789';
+            let password = '';
+            for (let i = 0; i < length; i++) {
+
+            const randomInx = Math.floor(Math.random() * char.length);
+
+            password += char.charAt(randomInx);
+        }
+            document.getElementById("password").textContent = password;
+}
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
